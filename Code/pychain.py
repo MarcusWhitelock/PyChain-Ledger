@@ -1,8 +1,6 @@
 # PyChain Ledger
 ################################################################################
-# You’ll make the following updates to the provided Python file for this
-# Challenge, which already contains the basic `PyChain` ledger structure that
-# you created throughout the module:
+# You’ll make the following updates to the file for this
 
 # Step 1: Create a Record Data Class
 # * Create a new data class named `Record`. This class will serve as the
@@ -46,7 +44,7 @@ import hashlib
 # Note that you’ll use this new `Record` class as the data type of your `record` attribute in the next section.
 
 
-# @TODO
+
 # Create a Record Data Class that consists of the `sender`, `receiver`, and
 # `amount` attributes
 @dataclass
@@ -70,7 +68,7 @@ class Record:
 @dataclass
 class Block:
 
-    # @TODO
+    
     # Rename the `data` attribute to `record`, and set the data type to `Record`
     record: Record
 
@@ -168,18 +166,18 @@ pychain = setup()
 # 4. Add an input area where you can get a value for `amount` from the user.
 # 5. As part of the Add Block button functionality, update `new_block` so that `Block` consists of an attribute named `record`, which is set equal to a `Record` that contains the `sender`, `receiver`, and `amount` values. The updated `Block`should also include the attributes for `creator_id` and `prev_hash`.
 
-# @TODO:
-# Delete the `input_data` variable from the Streamlit interface.
 
 
-# @TODO:
+
+
+
 # Add an input area where you can get a value for `sender` from the user.
 sender_id = st.text_area("Sender")
-# @TODO:
+
 # Add an input area where you can get a value for `receiver` from the user.
 receiver_id = st.text_area("Receiver")
 
-# @TODO:
+
 # Add an input area where you can get a value for `amount` from the user.
 amount_val = st.text_area("Amount")
 
@@ -187,7 +185,7 @@ if st.button("Add Block"):
     prev_block = pychain.chain[-1]
     prev_block_hash = prev_block.hash_block()
 
-    # @TODO
+    
     # Update `new_block` so that `Block` consists of an attribute named `record`
     # which is set equal to a `Record` that contains the `sender`, `receiver`,
     # and `amount` values
@@ -244,11 +242,7 @@ if st.button("Validate Chain"):
 # Block" button. Do this several times to store several blocks in the ledger.
 
 # 4. Verify the block contents and hashes in the Streamlit drop-down menu.
-# Take a screenshot of the Streamlit application page, which should detail a
-# blockchain that consists of multiple blocks. Include the screenshot in the
-# `README.md` file for your Challenge repository.
+
 
 # 5. Test the blockchain validation process by using the web interface.
-# Take a screenshot of the Streamlit application page, which should indicate
-# the validity of the blockchain. Include the screenshot in the `README.md`
-# file for your Challenge repository.
+
